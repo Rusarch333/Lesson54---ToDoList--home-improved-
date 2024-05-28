@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./index.js"></script>
+    <script defer src="./assets/js/sandbox.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <form id="my-form" class="form" method="GET">
+        <h2>Create task</h2>
+        <input type="text" name="body" value="write function"/>
+        <label class="prioritet-label">
+          <input type="radio" name="prioritet" />
+          <span>prioritet</span>
+        </label>
+        <fieldset>
+          <label>
+            <input type="checkbox" name="multiprop" value="1" />
+            <span>first option</span>
+          </label>
+          <label>
+            <input type="checkbox" name="multiprop" value="2" />
+            <span>second option</span>
+          </label>
+        </fieldset>
+        <select name="worker">
+          <option value="teamleed">teamleed</option>
+          <option value="propgramming">propgramming</option>
+          <option value="designer">designer</option>
+          <option value="testing">testing</option>
+        </select>
+        <button type="submit">submit</button>
+      </form>
+    </div>
+    <noscript>script off</noscript>
+  </body>
+</html>
