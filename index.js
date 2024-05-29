@@ -15,9 +15,9 @@ const { body: bodyInput } = myForm.elements;
 
 const PATTERN_BODY_INPUT = /^[А-ЯІЇҐЄ][a-яіїґє']{3,15} ([А-ЯІЇҐЄ]\.){2}$/;
 
-const bodyInputHandler = (PATTERN_BODY_INPUT) => {
+const bodyInputHandler = (PATTERN) => {
   return ({ target }) => {
-    if (PATTERN_BODY_INPUT.test(target.value.trim())) {
+    if (PATTERN.test(target.value.trim())) {
       target.style.setProperty('background-color', '');
     } else {
       target.style.setProperty('background-color', 'pink');
@@ -56,7 +56,7 @@ const renderTask = (task) => {
 
 const ulListTasks = document.createElement('ul');
 
-const myFormSubmitHandler = (PATTERN_BODY_INPUT, tasks, ulListTasks) => {
+const myFormSubmitHandler = (PATTERN, tasks, ulListTasks) => {
   return (event) => {
     event.preventDefault();
 
@@ -69,7 +69,7 @@ const myFormSubmitHandler = (PATTERN_BODY_INPUT, tasks, ulListTasks) => {
       }
     }
 
-    if (PATTERN_BODY_INPUT.test(bodyInput.value)) {
+    if (PATTERN.test(bodyInput.value)) {
       const task = {
         id: tasks.length + 1,
         body: body.value,
